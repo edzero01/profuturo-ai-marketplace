@@ -1,0 +1,14 @@
+{
+  "name": "profuturo",
+  "owner": {
+    "name": "Plataforma Profuturo"
+  },
+  "description": "Skills y reglas corporativas de Profuturo para agentes de IA",
+  "plugins": [
+    {
+      "name": "profuturo-java",
+      "source": "./plugins/profuturo-java",
+      "description": "Reglas y procedimientos para microservicios Spring Boot de Profuturo (capa Experience)"
+    }
+  ]
+}

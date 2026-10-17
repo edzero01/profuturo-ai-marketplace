@@ -1,0 +1,8 @@
+{
+  "name": "profuturo-java",
+  "version": "1.0.0",
+  "description": "Reglas y procedimientos para microservicios Spring Boot de Profuturo: capas, secretos, Oracle/JPA, endpoints y clientes Feign",
+  "author": {
+    "name": "Plataforma Profuturo"
+  }
+}

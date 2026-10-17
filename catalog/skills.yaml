@@ -1,0 +1,61 @@
+apiVersion: backstage.io/v1alpha1
+kind: AiResource
+metadata:
+  name: reglas-profuturo
+  title: Reglas Profuturo
+  description: Aplica las reglas corporativas antes de escribir o revisar código de un microservicio
+  annotations:
+    backstage.io/source-location: url:https://github.com/edzero01/profuturo-ai-marketplace/tree/main/plugins/profuturo-java/skills/reglas-profuturo/
+spec:
+  type: skill
+  lifecycle: experimental
+  owner: group:default/guests
+  system: ai-tooling
+  disciplines: [backend]
+  categories: [governance]
+  agents: [claude-code]
+  dependsOn:
+    - airesource:default/regla-capas-microservicio
+    - airesource:default/regla-secretos-y-configuracion
+    - airesource:default/regla-oracle-jpa
+---
+apiVersion: backstage.io/v1alpha1
+kind: AiResource
+metadata:
+  name: agregar-endpoint
+  title: Agregar endpoint
+  description: Procedimiento para exponer un endpoint REST con capas, OpenAPI, pruebas y PR
+  annotations:
+    backstage.io/source-location: url:https://github.com/edzero01/profuturo-ai-marketplace/tree/main/plugins/profuturo-java/skills/agregar-endpoint/
+spec:
+  type: skill
+  lifecycle: experimental
+  owner: group:default/guests
+  system: ai-tooling
+  disciplines: [backend]
+  categories: [procedure]
+  agents: [claude-code]
+  dependsOn:
+    - airesource:default/reglas-profuturo
+    - airesource:default/regla-capas-microservicio
+---
+apiVersion: backstage.io/v1alpha1
+kind: AiResource
+metadata:
+  name: agregar-cliente-feign
+  title: Agregar cliente Feign
+  description: Procedimiento para consumir otro microservicio con OpenFeign, stub local y variable en Helm
+  annotations:
+    backstage.io/source-location: url:https://github.com/edzero01/profuturo-ai-marketplace/tree/main/plugins/profuturo-java/skills/agregar-cliente-feign/
+spec:
+  type: skill
+  lifecycle: experimental
+  owner: group:default/guests
+  system: ai-tooling
+  disciplines: [backend]
+  categories: [procedure]
+  agents: [claude-code]
+  dependsOn:
+    - airesource:default/reglas-profuturo
+    - airesource:default/regla-capas-microservicio
+    - airesource:default/regla-secretos-y-configuracion

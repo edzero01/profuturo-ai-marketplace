@@ -1,0 +1,38 @@
+apiVersion: backstage.io/v1alpha1
+kind: AiResource
+metadata:
+  name: profuturo
+  title: Marketplace Profuturo
+  description: Marketplace de plugins de Claude Code de Profuturo. Los repos lo activan desde .claude/settings.json.
+  annotations:
+    backstage.io/source-location: url:https://github.com/edzero01/profuturo-ai-marketplace/tree/main/
+  links:
+    - url: https://github.com/edzero01/profuturo-ai-marketplace
+      title: Repositorio
+spec:
+  type: marketplace
+  lifecycle: experimental
+  owner: group:default/guests
+  system: ai-tooling
+  version: 1.0.0
+  plugins:
+    - airesource:default/profuturo-java
+---
+apiVersion: backstage.io/v1alpha1
+kind: AiResource
+metadata:
+  name: profuturo-java
+  title: Plugin profuturo-java
+  description: Reglas y procedimientos para microservicios Spring Boot de Profuturo
+  annotations:
+    backstage.io/source-location: url:https://github.com/edzero01/profuturo-ai-marketplace/tree/main/plugins/profuturo-java/
+spec:
+  type: plugin
+  lifecycle: experimental
+  owner: group:default/guests
+  system: ai-tooling
+  version: 1.0.0
+  skills:
+    - airesource:default/reglas-profuturo
+    - airesource:default/agregar-endpoint
+    - airesource:default/agregar-cliente-feign

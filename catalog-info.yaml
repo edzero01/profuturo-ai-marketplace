@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: profuturo-ai-marketplace
+  description: Recursos de IA de Profuturo (marketplace, plugin, skills y reglas)
+spec:
+  targets:
+    - ./catalog/system.yaml
+    - ./catalog/marketplace.yaml
+    - ./catalog/rules.yaml
+    - ./catalog/skills.yaml
+    - ./catalog/mcp-servers.yaml

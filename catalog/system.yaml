@@ -1,0 +1,8 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: ai-tooling
+  title: Herramientas de IA
+  description: Skills, reglas, plugins y servidores MCP que usan los agentes de IA de los equipos de desarrollo
+spec:
+  owner: group:default/guests

@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: backstage-mcp
+  title: MCP de Backstage
+  description: Expone el catálogo y el scaffolder de Backstage como herramientas MCP para los agentes
+  tags: [mcp]
+spec:
+  type: mcp-server
+  lifecycle: experimental
+  owner: group:default/guests
+  system: ai-tooling
+  remotes:
+    - type: streamable-http
+      url: http://localhost:7007/api/mcp-actions/v1
