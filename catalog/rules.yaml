@@ -3,7 +3,8 @@ kind: AiResource
 metadata:
   name: regla-capas-microservicio
   title: Capas del microservicio
-  description: Separación controllers / services / clients / repositories / beans en la capa Experience
+  description: Separación controllers / services / clients / repositories / beans
+    en la capa Experience
   annotations:
     backstage.io/source-location: url:https://github.com/edzero01/profuturo-ai-marketplace/blob/main/plugins/profuturo-java/skills/reglas-profuturo/rules/capas-microservicio.md
 spec:
@@ -12,15 +13,18 @@ spec:
   owner: group:default/guests
   system: ai-tooling
   category: architecture
-  disciplines: [backend]
-  rationale: Mantener las capas separadas permite cambiar un backend sin tocar el contrato que consumen los canales.
+  disciplines:
+  - backend
+  rationale: Mantener las capas separadas permite cambiar un backend sin tocar el
+    contrato que consumen los canales.
 ---
 apiVersion: backstage.io/v1alpha1
 kind: AiResource
 metadata:
   name: regla-secretos-y-configuracion
   title: Secretos y configuración
-  description: Ninguna credencial en Git; configuración por variables de entorno y Secrets de Kubernetes
+  description: Ninguna credencial en Git; configuración por variables de entorno y
+    Secrets de Kubernetes
   annotations:
     backstage.io/source-location: url:https://github.com/edzero01/profuturo-ai-marketplace/blob/main/plugins/profuturo-java/skills/reglas-profuturo/rules/secretos-y-configuracion.md
 spec:
@@ -29,15 +33,19 @@ spec:
   owner: group:default/guests
   system: ai-tooling
   category: security
-  disciplines: [backend, devops]
-  rationale: Profuturo maneja información financiera y personal; un secreto en Git queda en el historial aunque se borre.
+  disciplines:
+  - backend
+  - devops
+  rationale: Profuturo maneja información financiera y personal; un secreto en Git
+    queda en el historial aunque se borre.
 ---
 apiVersion: backstage.io/v1alpha1
 kind: AiResource
 metadata:
   name: regla-oracle-jpa
   title: Oracle y JPA
-  description: Consultas parametrizadas, sin SELECT *, paginación y esquema gestionado por el equipo de base de datos
+  description: Consultas parametrizadas, sin SELECT *, paginación y esquema gestionado
+    por el equipo de base de datos
   annotations:
     backstage.io/source-location: url:https://github.com/edzero01/profuturo-ai-marketplace/blob/main/plugins/profuturo-java/skills/reglas-profuturo/rules/oracle-jpa.md
 spec:
@@ -46,5 +54,55 @@ spec:
   owner: group:default/guests
   system: ai-tooling
   category: data
-  disciplines: [backend]
-  rationale: Los esquemas Oracle 19c se comparten con otras aplicaciones y los controla el equipo de base de datos.
+  disciplines:
+  - backend
+  rationale: Los esquemas Oracle 19c se comparten con otras aplicaciones y los controla
+    el equipo de base de datos.
+---
+apiVersion: backstage.io/v1alpha1
+kind: AiResource
+metadata:
+  name: profuturo-appian-lineamientos
+  title: Lineamientos appian y procedencia
+  annotations:
+    backstage.io/source-location: url:https://github.com/edzero01/profuturo-ai-marketplace/blob/main/plugins/profuturo-appian/contracts/catalog.json
+spec:
+  type: rule
+  lifecycle: experimental
+  owner: group:default/guests
+  system: ai-tooling
+  category: construction
+  disciplines:
+  - appian
+---
+apiVersion: backstage.io/v1alpha1
+kind: AiResource
+metadata:
+  name: profuturo-databricks-lineamientos
+  title: Lineamientos databricks y procedencia
+  annotations:
+    backstage.io/source-location: url:https://github.com/edzero01/profuturo-ai-marketplace/blob/main/plugins/profuturo-databricks/contracts/catalog.json
+spec:
+  type: rule
+  lifecycle: experimental
+  owner: group:default/guests
+  system: ai-tooling
+  category: construction
+  disciplines:
+  - databricks
+---
+apiVersion: backstage.io/v1alpha1
+kind: AiResource
+metadata:
+  name: profuturo-microservicios-lineamientos
+  title: Lineamientos microservicios y procedencia
+  annotations:
+    backstage.io/source-location: url:https://github.com/edzero01/profuturo-ai-marketplace/blob/main/plugins/profuturo-microservicios/contracts/catalog.json
+spec:
+  type: rule
+  lifecycle: experimental
+  owner: group:default/guests
+  system: ai-tooling
+  category: construction
+  disciplines:
+  - microservicios

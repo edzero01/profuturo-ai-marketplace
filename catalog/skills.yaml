@@ -3,7 +3,8 @@ kind: AiResource
 metadata:
   name: reglas-profuturo
   title: Reglas Profuturo
-  description: Aplica las reglas corporativas antes de escribir o revisar código de un microservicio
+  description: Aplica las reglas corporativas antes de escribir o revisar código de
+    un microservicio
   annotations:
     backstage.io/source-location: url:https://github.com/edzero01/profuturo-ai-marketplace/tree/main/plugins/profuturo-java/skills/reglas-profuturo/
 spec:
@@ -11,20 +12,24 @@ spec:
   lifecycle: experimental
   owner: group:default/guests
   system: ai-tooling
-  disciplines: [backend]
-  categories: [governance]
-  agents: [claude-code]
+  disciplines:
+  - backend
+  categories:
+  - governance
+  agents:
+  - claude-code
   dependsOn:
-    - airesource:default/regla-capas-microservicio
-    - airesource:default/regla-secretos-y-configuracion
-    - airesource:default/regla-oracle-jpa
+  - airesource:default/regla-capas-microservicio
+  - airesource:default/regla-secretos-y-configuracion
+  - airesource:default/regla-oracle-jpa
 ---
 apiVersion: backstage.io/v1alpha1
 kind: AiResource
 metadata:
   name: agregar-endpoint
   title: Agregar endpoint
-  description: Procedimiento para exponer un endpoint REST con capas, OpenAPI, pruebas y PR
+  description: Procedimiento para exponer un endpoint REST con capas, OpenAPI, pruebas
+    y PR
   annotations:
     backstage.io/source-location: url:https://github.com/edzero01/profuturo-ai-marketplace/tree/main/plugins/profuturo-java/skills/agregar-endpoint/
 spec:
@@ -32,19 +37,23 @@ spec:
   lifecycle: experimental
   owner: group:default/guests
   system: ai-tooling
-  disciplines: [backend]
-  categories: [procedure]
-  agents: [claude-code]
+  disciplines:
+  - backend
+  categories:
+  - procedure
+  agents:
+  - claude-code
   dependsOn:
-    - airesource:default/reglas-profuturo
-    - airesource:default/regla-capas-microservicio
+  - airesource:default/reglas-profuturo
+  - airesource:default/regla-capas-microservicio
 ---
 apiVersion: backstage.io/v1alpha1
 kind: AiResource
 metadata:
   name: agregar-cliente-feign
   title: Agregar cliente Feign
-  description: Procedimiento para consumir otro microservicio con OpenFeign, stub local y variable en Helm
+  description: Procedimiento para consumir otro microservicio con OpenFeign, stub
+    local y variable en Helm
   annotations:
     backstage.io/source-location: url:https://github.com/edzero01/profuturo-ai-marketplace/tree/main/plugins/profuturo-java/skills/agregar-cliente-feign/
 spec:
@@ -52,10 +61,373 @@ spec:
   lifecycle: experimental
   owner: group:default/guests
   system: ai-tooling
-  disciplines: [backend]
-  categories: [procedure]
-  agents: [claude-code]
+  disciplines:
+  - backend
+  categories:
+  - procedure
+  agents:
+  - claude-code
   dependsOn:
-    - airesource:default/reglas-profuturo
-    - airesource:default/regla-capas-microservicio
-    - airesource:default/regla-secretos-y-configuracion
+  - airesource:default/reglas-profuturo
+  - airesource:default/regla-capas-microservicio
+  - airesource:default/regla-secretos-y-configuracion
+---
+apiVersion: backstage.io/v1alpha1
+kind: AiResource
+metadata:
+  name: profuturo-appian-appian-referencia
+  title: 'profuturo-appian: appian-referencia'
+  annotations:
+    backstage.io/source-location: url:https://github.com/edzero01/profuturo-ai-marketplace/blob/main/plugins/profuturo-appian/skills/appian-referencia/SKILL.md
+spec:
+  type: skill
+  lifecycle: experimental
+  owner: group:default/guests
+  system: ai-tooling
+  dependsOn:
+  - airesource:default/profuturo-appian-lineamientos
+---
+apiVersion: backstage.io/v1alpha1
+kind: AiResource
+metadata:
+  name: profuturo-appian-construccion
+  title: 'profuturo-appian: profuturo-appian'
+  annotations:
+    backstage.io/source-location: url:https://github.com/edzero01/profuturo-ai-marketplace/blob/main/plugins/profuturo-appian/skills/profuturo-appian/SKILL.md
+spec:
+  type: skill
+  lifecycle: experimental
+  owner: group:default/guests
+  system: ai-tooling
+  dependsOn:
+  - airesource:default/profuturo-appian-lineamientos
+---
+apiVersion: backstage.io/v1alpha1
+kind: AiResource
+metadata:
+  name: profuturo-appian-arquitectura
+  title: 'profuturo-appian: profuturo-appian-arquitectura'
+  annotations:
+    backstage.io/source-location: url:https://github.com/edzero01/profuturo-ai-marketplace/blob/main/plugins/profuturo-appian/skills/profuturo-appian-arquitectura/SKILL.md
+spec:
+  type: skill
+  lifecycle: experimental
+  owner: group:default/guests
+  system: ai-tooling
+  dependsOn:
+  - airesource:default/profuturo-appian-lineamientos
+---
+apiVersion: backstage.io/v1alpha1
+kind: AiResource
+metadata:
+  name: profuturo-appian-calidad-operacion
+  title: 'profuturo-appian: profuturo-appian-calidad-operacion'
+  annotations:
+    backstage.io/source-location: url:https://github.com/edzero01/profuturo-ai-marketplace/blob/main/plugins/profuturo-appian/skills/profuturo-appian-calidad-operacion/SKILL.md
+spec:
+  type: skill
+  lifecycle: experimental
+  owner: group:default/guests
+  system: ai-tooling
+  dependsOn:
+  - airesource:default/profuturo-appian-lineamientos
+---
+apiVersion: backstage.io/v1alpha1
+kind: AiResource
+metadata:
+  name: profuturo-appian-coordinador
+  title: 'profuturo-appian: profuturo-appian-coordinador'
+  annotations:
+    backstage.io/source-location: url:https://github.com/edzero01/profuturo-ai-marketplace/blob/main/plugins/profuturo-appian/skills/profuturo-appian-coordinador/SKILL.md
+spec:
+  type: skill
+  lifecycle: experimental
+  owner: group:default/guests
+  system: ai-tooling
+  dependsOn:
+  - airesource:default/profuturo-appian-lineamientos
+---
+apiVersion: backstage.io/v1alpha1
+kind: AiResource
+metadata:
+  name: profuturo-appian-datos-seguridad
+  title: 'profuturo-appian: profuturo-appian-datos-seguridad'
+  annotations:
+    backstage.io/source-location: url:https://github.com/edzero01/profuturo-ai-marketplace/blob/main/plugins/profuturo-appian/skills/profuturo-appian-datos-seguridad/SKILL.md
+spec:
+  type: skill
+  lifecycle: experimental
+  owner: group:default/guests
+  system: ai-tooling
+  dependsOn:
+  - airesource:default/profuturo-appian-lineamientos
+---
+apiVersion: backstage.io/v1alpha1
+kind: AiResource
+metadata:
+  name: profuturo-appian-integracion
+  title: 'profuturo-appian: profuturo-appian-integracion'
+  annotations:
+    backstage.io/source-location: url:https://github.com/edzero01/profuturo-ai-marketplace/blob/main/plugins/profuturo-appian/skills/profuturo-appian-integracion/SKILL.md
+spec:
+  type: skill
+  lifecycle: experimental
+  owner: group:default/guests
+  system: ai-tooling
+  dependsOn:
+  - airesource:default/profuturo-appian-lineamientos
+---
+apiVersion: backstage.io/v1alpha1
+kind: AiResource
+metadata:
+  name: profuturo-appian-interfaces-ux
+  title: 'profuturo-appian: profuturo-appian-interfaces-ux'
+  annotations:
+    backstage.io/source-location: url:https://github.com/edzero01/profuturo-ai-marketplace/blob/main/plugins/profuturo-appian/skills/profuturo-appian-interfaces-ux/SKILL.md
+spec:
+  type: skill
+  lifecycle: experimental
+  owner: group:default/guests
+  system: ai-tooling
+  dependsOn:
+  - airesource:default/profuturo-appian-lineamientos
+---
+apiVersion: backstage.io/v1alpha1
+kind: AiResource
+metadata:
+  name: profuturo-appian-reglas-procesos
+  title: 'profuturo-appian: profuturo-appian-reglas-procesos'
+  annotations:
+    backstage.io/source-location: url:https://github.com/edzero01/profuturo-ai-marketplace/blob/main/plugins/profuturo-appian/skills/profuturo-appian-reglas-procesos/SKILL.md
+spec:
+  type: skill
+  lifecycle: experimental
+  owner: group:default/guests
+  system: ai-tooling
+  dependsOn:
+  - airesource:default/profuturo-appian-lineamientos
+---
+apiVersion: backstage.io/v1alpha1
+kind: AiResource
+metadata:
+  name: profuturo-databricks-construccion
+  title: 'profuturo-databricks: profuturo-databricks'
+  annotations:
+    backstage.io/source-location: url:https://github.com/edzero01/profuturo-ai-marketplace/blob/main/plugins/profuturo-databricks/skills/profuturo-databricks/SKILL.md
+spec:
+  type: skill
+  lifecycle: experimental
+  owner: group:default/guests
+  system: ai-tooling
+  dependsOn:
+  - airesource:default/profuturo-databricks-lineamientos
+---
+apiVersion: backstage.io/v1alpha1
+kind: AiResource
+metadata:
+  name: profuturo-databricks-calidad-operacion
+  title: 'profuturo-databricks: profuturo-databricks-calidad-operacion'
+  annotations:
+    backstage.io/source-location: url:https://github.com/edzero01/profuturo-ai-marketplace/blob/main/plugins/profuturo-databricks/skills/profuturo-databricks-calidad-operacion/SKILL.md
+spec:
+  type: skill
+  lifecycle: experimental
+  owner: group:default/guests
+  system: ai-tooling
+  dependsOn:
+  - airesource:default/profuturo-databricks-lineamientos
+---
+apiVersion: backstage.io/v1alpha1
+kind: AiResource
+metadata:
+  name: profuturo-databricks-coordinador
+  title: 'profuturo-databricks: profuturo-databricks-coordinador'
+  annotations:
+    backstage.io/source-location: url:https://github.com/edzero01/profuturo-ai-marketplace/blob/main/plugins/profuturo-databricks/skills/profuturo-databricks-coordinador/SKILL.md
+spec:
+  type: skill
+  lifecycle: experimental
+  owner: group:default/guests
+  system: ai-tooling
+  dependsOn:
+  - airesource:default/profuturo-databricks-lineamientos
+---
+apiVersion: backstage.io/v1alpha1
+kind: AiResource
+metadata:
+  name: profuturo-databricks-datos-sql
+  title: 'profuturo-databricks: profuturo-databricks-datos-sql'
+  annotations:
+    backstage.io/source-location: url:https://github.com/edzero01/profuturo-ai-marketplace/blob/main/plugins/profuturo-databricks/skills/profuturo-databricks-datos-sql/SKILL.md
+spec:
+  type: skill
+  lifecycle: experimental
+  owner: group:default/guests
+  system: ai-tooling
+  dependsOn:
+  - airesource:default/profuturo-databricks-lineamientos
+---
+apiVersion: backstage.io/v1alpha1
+kind: AiResource
+metadata:
+  name: profuturo-databricks-framework
+  title: 'profuturo-databricks: profuturo-databricks-framework'
+  annotations:
+    backstage.io/source-location: url:https://github.com/edzero01/profuturo-ai-marketplace/blob/main/plugins/profuturo-databricks/skills/profuturo-databricks-framework/SKILL.md
+spec:
+  type: skill
+  lifecycle: experimental
+  owner: group:default/guests
+  system: ai-tooling
+  dependsOn:
+  - airesource:default/profuturo-databricks-lineamientos
+---
+apiVersion: backstage.io/v1alpha1
+kind: AiResource
+metadata:
+  name: profuturo-databricks-jobs-recuperacion
+  title: 'profuturo-databricks: profuturo-databricks-jobs-recuperacion'
+  annotations:
+    backstage.io/source-location: url:https://github.com/edzero01/profuturo-ai-marketplace/blob/main/plugins/profuturo-databricks/skills/profuturo-databricks-jobs-recuperacion/SKILL.md
+spec:
+  type: skill
+  lifecycle: experimental
+  owner: group:default/guests
+  system: ai-tooling
+  dependsOn:
+  - airesource:default/profuturo-databricks-lineamientos
+---
+apiVersion: backstage.io/v1alpha1
+kind: AiResource
+metadata:
+  name: profuturo-microservicios-agregar-cliente-feign
+  title: 'profuturo-microservicios: agregar-cliente-feign'
+  annotations:
+    backstage.io/source-location: url:https://github.com/edzero01/profuturo-ai-marketplace/blob/main/plugins/profuturo-microservicios/skills/agregar-cliente-feign/SKILL.md
+spec:
+  type: skill
+  lifecycle: experimental
+  owner: group:default/guests
+  system: ai-tooling
+  dependsOn:
+  - airesource:default/profuturo-microservicios-lineamientos
+---
+apiVersion: backstage.io/v1alpha1
+kind: AiResource
+metadata:
+  name: profuturo-microservicios-agregar-endpoint
+  title: 'profuturo-microservicios: agregar-endpoint'
+  annotations:
+    backstage.io/source-location: url:https://github.com/edzero01/profuturo-ai-marketplace/blob/main/plugins/profuturo-microservicios/skills/agregar-endpoint/SKILL.md
+spec:
+  type: skill
+  lifecycle: experimental
+  owner: group:default/guests
+  system: ai-tooling
+  dependsOn:
+  - airesource:default/profuturo-microservicios-lineamientos
+---
+apiVersion: backstage.io/v1alpha1
+kind: AiResource
+metadata:
+  name: profuturo-microservicios-construccion
+  title: 'profuturo-microservicios: profuturo-microservicios'
+  annotations:
+    backstage.io/source-location: url:https://github.com/edzero01/profuturo-ai-marketplace/blob/main/plugins/profuturo-microservicios/skills/profuturo-microservicios/SKILL.md
+spec:
+  type: skill
+  lifecycle: experimental
+  owner: group:default/guests
+  system: ai-tooling
+  dependsOn:
+  - airesource:default/profuturo-microservicios-lineamientos
+---
+apiVersion: backstage.io/v1alpha1
+kind: AiResource
+metadata:
+  name: profuturo-microservicios-calidad-operacion
+  title: 'profuturo-microservicios: profuturo-microservicios-calidad-operacion'
+  annotations:
+    backstage.io/source-location: url:https://github.com/edzero01/profuturo-ai-marketplace/blob/main/plugins/profuturo-microservicios/skills/profuturo-microservicios-calidad-operacion/SKILL.md
+spec:
+  type: skill
+  lifecycle: experimental
+  owner: group:default/guests
+  system: ai-tooling
+  dependsOn:
+  - airesource:default/profuturo-microservicios-lineamientos
+---
+apiVersion: backstage.io/v1alpha1
+kind: AiResource
+metadata:
+  name: profuturo-microservicios-contratos-eventos
+  title: 'profuturo-microservicios: profuturo-microservicios-contratos-eventos'
+  annotations:
+    backstage.io/source-location: url:https://github.com/edzero01/profuturo-ai-marketplace/blob/main/plugins/profuturo-microservicios/skills/profuturo-microservicios-contratos-eventos/SKILL.md
+spec:
+  type: skill
+  lifecycle: experimental
+  owner: group:default/guests
+  system: ai-tooling
+  dependsOn:
+  - airesource:default/profuturo-microservicios-lineamientos
+---
+apiVersion: backstage.io/v1alpha1
+kind: AiResource
+metadata:
+  name: profuturo-microservicios-coordinador
+  title: 'profuturo-microservicios: profuturo-microservicios-coordinador'
+  annotations:
+    backstage.io/source-location: url:https://github.com/edzero01/profuturo-ai-marketplace/blob/main/plugins/profuturo-microservicios/skills/profuturo-microservicios-coordinador/SKILL.md
+spec:
+  type: skill
+  lifecycle: experimental
+  owner: group:default/guests
+  system: ai-tooling
+  dependsOn:
+  - airesource:default/profuturo-microservicios-lineamientos
+---
+apiVersion: backstage.io/v1alpha1
+kind: AiResource
+metadata:
+  name: profuturo-microservicios-logica-datos
+  title: 'profuturo-microservicios: profuturo-microservicios-logica-datos'
+  annotations:
+    backstage.io/source-location: url:https://github.com/edzero01/profuturo-ai-marketplace/blob/main/plugins/profuturo-microservicios/skills/profuturo-microservicios-logica-datos/SKILL.md
+spec:
+  type: skill
+  lifecycle: experimental
+  owner: group:default/guests
+  system: ai-tooling
+  dependsOn:
+  - airesource:default/profuturo-microservicios-lineamientos
+---
+apiVersion: backstage.io/v1alpha1
+kind: AiResource
+metadata:
+  name: profuturo-microservicios-seguridad-resiliencia
+  title: 'profuturo-microservicios: profuturo-microservicios-seguridad-resiliencia'
+  annotations:
+    backstage.io/source-location: url:https://github.com/edzero01/profuturo-ai-marketplace/blob/main/plugins/profuturo-microservicios/skills/profuturo-microservicios-seguridad-resiliencia/SKILL.md
+spec:
+  type: skill
+  lifecycle: experimental
+  owner: group:default/guests
+  system: ai-tooling
+  dependsOn:
+  - airesource:default/profuturo-microservicios-lineamientos
+---
+apiVersion: backstage.io/v1alpha1
+kind: AiResource
+metadata:
+  name: profuturo-microservicios-reglas-profuturo
+  title: 'profuturo-microservicios: reglas-profuturo'
+  annotations:
+    backstage.io/source-location: url:https://github.com/edzero01/profuturo-ai-marketplace/blob/main/plugins/profuturo-microservicios/skills/reglas-profuturo/SKILL.md
+spec:
+  type: skill
+  lifecycle: experimental
+  owner: group:default/guests
+  system: ai-tooling
+  dependsOn:
+  - airesource:default/profuturo-microservicios-lineamientos

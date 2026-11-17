@@ -3,20 +3,24 @@ kind: AiResource
 metadata:
   name: profuturo
   title: Marketplace Profuturo
-  description: Marketplace de plugins de Claude Code de Profuturo. Los repos lo activan desde .claude/settings.json.
+  description: Marketplace de plugins de Claude Code de Profuturo. Los repos lo activan
+    desde .claude/settings.json.
   annotations:
     backstage.io/source-location: url:https://github.com/edzero01/profuturo-ai-marketplace/tree/main/
   links:
-    - url: https://github.com/edzero01/profuturo-ai-marketplace
-      title: Repositorio
+  - url: https://github.com/edzero01/profuturo-ai-marketplace
+    title: Repositorio
 spec:
   type: marketplace
   lifecycle: experimental
   owner: group:default/guests
   system: ai-tooling
-  version: 1.0.0
+  version: 1.1.0
   plugins:
-    - airesource:default/profuturo-java
+  - airesource:default/profuturo-java
+  - airesource:default/profuturo-appian
+  - airesource:default/profuturo-databricks
+  - airesource:default/profuturo-microservicios
 ---
 apiVersion: backstage.io/v1alpha1
 kind: AiResource
@@ -31,8 +35,77 @@ spec:
   lifecycle: experimental
   owner: group:default/guests
   system: ai-tooling
+  version: 1.0.1
+  skills:
+  - airesource:default/reglas-profuturo
+  - airesource:default/agregar-endpoint
+  - airesource:default/agregar-cliente-feign
+---
+apiVersion: backstage.io/v1alpha1
+kind: AiResource
+metadata:
+  name: profuturo-appian
+  title: Plugin profuturo-appian
+  annotations:
+    backstage.io/source-location: url:https://github.com/edzero01/profuturo-ai-marketplace/tree/main/plugins/profuturo-appian/
+spec:
+  type: plugin
+  lifecycle: experimental
+  owner: group:default/guests
+  system: ai-tooling
   version: 1.0.0
   skills:
-    - airesource:default/reglas-profuturo
-    - airesource:default/agregar-endpoint
-    - airesource:default/agregar-cliente-feign
+  - airesource:default/profuturo-appian-appian-referencia
+  - airesource:default/profuturo-appian-construccion
+  - airesource:default/profuturo-appian-arquitectura
+  - airesource:default/profuturo-appian-calidad-operacion
+  - airesource:default/profuturo-appian-coordinador
+  - airesource:default/profuturo-appian-datos-seguridad
+  - airesource:default/profuturo-appian-integracion
+  - airesource:default/profuturo-appian-interfaces-ux
+  - airesource:default/profuturo-appian-reglas-procesos
+---
+apiVersion: backstage.io/v1alpha1
+kind: AiResource
+metadata:
+  name: profuturo-databricks
+  title: Plugin profuturo-databricks
+  annotations:
+    backstage.io/source-location: url:https://github.com/edzero01/profuturo-ai-marketplace/tree/main/plugins/profuturo-databricks/
+spec:
+  type: plugin
+  lifecycle: experimental
+  owner: group:default/guests
+  system: ai-tooling
+  version: 1.0.0
+  skills:
+  - airesource:default/profuturo-databricks-construccion
+  - airesource:default/profuturo-databricks-calidad-operacion
+  - airesource:default/profuturo-databricks-coordinador
+  - airesource:default/profuturo-databricks-datos-sql
+  - airesource:default/profuturo-databricks-framework
+  - airesource:default/profuturo-databricks-jobs-recuperacion
+---
+apiVersion: backstage.io/v1alpha1
+kind: AiResource
+metadata:
+  name: profuturo-microservicios
+  title: Plugin profuturo-microservicios
+  annotations:
+    backstage.io/source-location: url:https://github.com/edzero01/profuturo-ai-marketplace/tree/main/plugins/profuturo-microservicios/
+spec:
+  type: plugin
+  lifecycle: experimental
+  owner: group:default/guests
+  system: ai-tooling
+  version: 1.0.0
+  skills:
+  - airesource:default/profuturo-microservicios-agregar-cliente-feign
+  - airesource:default/profuturo-microservicios-agregar-endpoint
+  - airesource:default/profuturo-microservicios-construccion
+  - airesource:default/profuturo-microservicios-calidad-operacion
+  - airesource:default/profuturo-microservicios-contratos-eventos
+  - airesource:default/profuturo-microservicios-coordinador
+  - airesource:default/profuturo-microservicios-logica-datos
+  - airesource:default/profuturo-microservicios-seguridad-resiliencia
+  - airesource:default/profuturo-microservicios-reglas-profuturo

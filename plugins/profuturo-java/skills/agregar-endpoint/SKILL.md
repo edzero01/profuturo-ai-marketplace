@@ -51,4 +51,4 @@ curl -s http://localhost:8080/<servicio>/<ruta>
 ```
 
 - Revisa que aparezca en Swagger: `http://localhost:8080/<servicio>/open-api/swagger-ui.html`.
-- Crea una rama, haz commit y abre un pull request a `main`. No hagas push directo a `main`: el merge dispara el CI que publica la imagen y Argo CD despliega en dev.
+- Crea una rama, haz commit y abre un pull request a `main`. No hagas push directo a `main`: el merge dispara el CI que publica la imagen y GitHub Actions despliega con Helm en dev.

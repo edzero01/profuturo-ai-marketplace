@@ -1,0 +1,619 @@
+{
+  "technology": "appian",
+  "version": "1.0.0",
+  "criteria": [
+    {
+      "id": "APP-01-01",
+      "requirement": "Asignar cada capacidad a un componente y un responsable; relacionar trámites como consumidores sin imponer propiedad exclusiva.",
+      "source": "R",
+      "locator": "Atlas previo: vistas Ecosistema y Repos",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Mapa y decisión de Arquitectura con responsables.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-01-02",
+      "requirement": "Registrar UUID, aplicaciones asociadas y referencias reales antes de declarar una dependencia o propiedad.",
+      "source": "R",
+      "locator": "Evidencia Dev D01–D07; referencias por confirmar",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Inventario por UUID y captura de referencias.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-01-03",
+      "requirement": "Identificar interfaces comunes o transversales y su librería de reutilización autorizada.",
+      "source": "D1",
+      "locator": "D1 · texto extraído, línea 122 · Si es una interfaz común",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Objeto, librería y consumidores identificados.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-01-04",
+      "requirement": "Definir carpetas por tipo principal y grupos Users/Admins conforme al alcance confirmado.",
+      "source": "D1",
+      "locator": "D1 · texto extraído, línea 83 · Folder por cada tipo principal",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Inventario de carpetas y matriz de acceso.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-02-01",
+      "requirement": "Nombre corto y descriptivo, descripción obligatoria y prefijo de 2–3 caracteres según D1; confirmar convivencia con prefijos históricos.",
+      "source": "D1",
+      "locator": "D1 · texto extraído, línea 78 · El prefijo de una aplicación",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Ficha de aplicación y excepción cuando proceda.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-02-02",
+      "requirement": "Prefijo, PascalCase, guion bajo, nombre único, descripción y uso de inglés según capítulo del tipo.",
+      "source": "D1",
+      "locator": "D1 · texto extraído, línea 124 · HRO_AddNewEmployee",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Listado por UUID, convención elegida y desviaciones.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-02-03",
+      "requirement": "Inputs y variables con camelCase, nombre descriptivo y sufijo de tipo donde D1 lo establece.",
+      "source": "D1",
+      "locator": "D1 · texto extraído, línea 130 · ri!folio_txt",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Contrato de entradas y muestra de variables.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-02-04",
+      "requirement": "Constantes en mayúsculas con tipo; PM/Connected Systems/Sites según Title Case; revisar por separado Decision, Integration y Web API.",
+      "source": "D1",
+      "locator": "D1 · texto extraído, línea 201 · HRO_INT_SUBPROCESS_ID_LIST",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Inventario y decisión de nomenclatura por tipo.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-03-01",
+      "requirement": "Definir fuente maestra, entidades, campos, claves y relaciones antes del mapeo Appian.",
+      "source": "R",
+      "locator": "Recomendación derivada de análisis de datos",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Modelo y diccionario versionados.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-03-02",
+      "requirement": "Usar camelCase, Display Name descriptivo y descripción de utilidad de cada campo.",
+      "source": "D1",
+      "locator": "D1 · texto extraído, línea 98 · Un Display Name descriptivo",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Captura o export autorizado del Record Type.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-03-03",
+      "requirement": "Justificar modo y agenda de sincronización y revisar manejo de fallos; no aplicar omisión de fallos sin analizar consistencia.",
+      "source": "D1",
+      "locator": "D1 · texto extraído, línea 101 · saltar las sincronizaciones fallidas",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Decisión, configuración y prueba de recuperación.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-03-04",
+      "requirement": "Gestionar autorización en Record y campos/vistas/acciones; evitar que filtros visuales sean el único control.",
+      "source": "D1",
+      "locator": "D1 · texto extraído, línea 104 · Record-Level Security",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Matriz y pruebas positivas/negativas con datos sintéticos.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-03-05",
+      "requirement": "Revisar justificación de Data Stores y centralización de filtros en Record Types según D1.",
+      "source": "D1",
+      "locator": "D1 · texto extraído, línea 107 · múltiples Data Stores",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Inventario de fuentes y decisión de excepciones.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-04-01",
+      "requirement": "Extraer lógica compleja de variables y componentes a reglas con responsabilidad delimitada.",
+      "source": "D1",
+      "locator": "D1 · texto extraído, línea 182 · Considere separar responsabilidades",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Regla y contrato entradas/salidas, errores y consumidores.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-04-02",
+      "requirement": "Cubrir happy path y entradas nulas; añadir límites de fechas, negativos, grandes valores y arreglos según dominio.",
+      "source": "D1",
+      "locator": "D1 · texto extraído, línea 175 · por lo menos 2 casos",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Casos de prueba y resultados por versión.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-04-03",
+      "requirement": "Evitar queryEntity/queryRecordType dentro de loops; justificar alternativas y medir volumen.",
+      "source": "D1",
+      "locator": "D1 · texto extraído, línea 141 · consultar en funciones loop",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Código revisado y evidencia de evaluación.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-04-04",
+      "requirement": "Usar funciones documentadas y plugins con soporte; aclarar la frase ambigua sobre documentación de código.",
+      "source": "D1",
+      "locator": "D1 · texto extraído, línea 185 · No deberá documentar código",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Listado de dependencias y decisión aclaratoria.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-05-01",
+      "requirement": "Revisar procesos que superen 30 nodos, lógica compleja en nodos y exceso de Activity Chaining.",
+      "source": "D1",
+      "locator": "D1 · texto extraído, línea 238 · más de 30 nodos",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Diagrama, conteo y decisión de descomposición.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-05-02",
+      "requirement": "Mantener variables necesarias, revisar Hidden para información larga y limpiar cargas pesadas al finalizar.",
+      "source": "D1",
+      "locator": "D1 · texto extraído, línea 229 · base64, respuestas de servicios largas",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Diccionario de variables y prueba de finalización.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-05-03",
+      "requirement": "Seleccionar gateways por semántica y revisar patrón de inicio asíncrono y terminación de cada ruta.",
+      "source": "D1",
+      "locator": "D1 · texto extraído, línea 242 · Gateway XOR",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Modelo y escenarios con resultado esperado.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-05-04",
+      "requirement": "Definir actores/grupos, asignación, autorización, plazos, reintentos, cancelación y resultado incierto.",
+      "source": "R",
+      "locator": "Recomendación de contrato operativo",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Matriz rol–acción y casos de excepción.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-05-05",
+      "requirement": "Usar nombres descriptivos y revisar errores/recomendaciones antes de entregar el modelo.",
+      "source": "D1",
+      "locator": "D1 · texto extraído, línea 241 · nombres por default",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Recibo de revisión del modelo con pendientes.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-06-01",
+      "requirement": "Referencia D2: Open Sans 14px, peso 600 para títulos y 400 para texto; paleta documentada. Validar equivalencias nativas.",
+      "source": "D2",
+      "locator": "D2 · texto extraído, línea 109 · Open Sans",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Capturas, componente usado y decisión UX.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-06-02",
+      "requirement": "Referencia D2: separación 8px, títulos-tablas 13px y márgenes 23×17px; verificar representación visual nativa.",
+      "source": "D2",
+      "locator": "D2 · texto extraído, línea 79 · Los márgenes son de",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Capturas por viewport y equivalencias aceptadas.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-06-03",
+      "requirement": "Aplicar estilo de encabezado, alineación de importes/acciones y tratamiento de totales conforme a D2 p5.",
+      "source": "D2",
+      "locator": "D2 · texto extraído, línea 280 · contenido en pesos",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Capturas y escenarios de contenido variable.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-06-04",
+      "requirement": "Etiquetas en infinitivo/mayúsculas, prioridad visual y mensajes que identifiquen acción y objeto.",
+      "source": "D2",
+      "locator": "D2 · texto extraído, línea 391 · Las etiquetas deben ir",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Flujo UX, textos y prueba de permisos/estado.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-06-05",
+      "requirement": "Revisar componentes comunes, etiquetas, teclado, foco y lectura de errores; acordar criterios de accesibilidad.",
+      "source": "R",
+      "locator": "Recomendación de calidad UX",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Lista de escenarios y capturas.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-06-06",
+      "requirement": "Preparar valores de prueba suficientes para visualizar interfaz completa sin incrustar datos reales o defaults operativos peligrosos.",
+      "source": "D1",
+      "locator": "D1 · texto extraído, línea 139 · valores de prueba seteados",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Inputs sintéticos y pantalla de prueba.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-07-01",
+      "requirement": "Gestionar autenticación nativamente en Connected System y utilizarlo para URL base según D1.",
+      "source": "D1",
+      "locator": "D1 · texto extraído, línea 287 · autenticación en constantes",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Tipo de autenticación, dueño y configuración censurada.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-07-02",
+      "requirement": "Registrar proveedor/consumidor, inputs, outputs, códigos, esquema y versión por operación.",
+      "source": "R",
+      "locator": "Recomendación de contratos INT-ID",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "INT-ID, esquema y ejemplos sintéticos.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-07-03",
+      "requirement": "Definir timeout, reintentos, idempotencia y conciliación según operación; no inventar valores.",
+      "source": "R",
+      "locator": "Recomendación de resiliencia",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Tabla de fallos, fuente de umbrales y pruebas.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-07-04",
+      "requirement": "Acordar permisos, autenticación/autorización y consumidores de Web API; no inferirlos del objeto existente.",
+      "source": "R",
+      "locator": "Recomendación de seguridad de frontera",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Matriz de permisos y contrato sin credenciales.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-08-01",
+      "requirement": "Definir perfiles y mínimo privilegio; usar Users/Admins como base D1, sin asumir que dos grupos bastan.",
+      "source": "D1",
+      "locator": "D1 · texto extraído, línea 84 · 2 grupos principales",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Matriz, aprobación y pruebas por perfil.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-08-02",
+      "requirement": "Probar separación de registros, campos y acciones por usuario/rol.",
+      "source": "D1",
+      "locator": "D1 · texto extraído, línea 104 · Field-Level Security",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Resultados de acceso por rol y versión.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-08-03",
+      "requirement": "Evitar credenciales en constantes, ejemplos, logs y documentos; acordar custodia y rotación.",
+      "source": "D1",
+      "locator": "D1 · texto extraído, línea 287 · autenticación en constantes",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Evidencia sin valores sensibles y responsable.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-08-04",
+      "requirement": "Acordar clasificación, retención, trazas y acceso a evidencia; no inferir normativa por el sector.",
+      "source": "R",
+      "locator": "Recomendación de gobierno de información",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Política fuente, decisión y pruebas.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-09-01",
+      "requirement": "D1 menciona 200ms para variables locales; definir método, volumen, ambiente y tratamiento de dependencias.",
+      "source": "D1",
+      "locator": "D1 · texto extraído, línea 144 · 200 ms",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Medición reproducible y umbral acordado.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-09-02",
+      "requirement": "Al superar 700 líneas, considerar modularización según D1.",
+      "source": "D1",
+      "locator": "D1 · texto extraído, línea 145 · 700 líneas",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Conteo, revisión y decisión.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-09-03",
+      "requirement": "Evitar consultas en bucle y pasar solo los campos requeridos; medir paginación y carga.",
+      "source": "D1",
+      "locator": "D1 · texto extraído, línea 143 · campos requeridos",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Traza y medición con datos sintéticos.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-09-04",
+      "requirement": "Acordar volumen, concurrencia, latencia y degradación por capacidad antes de afirmar desempeño.",
+      "source": "R",
+      "locator": "Recomendación de capacidad",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Escenarios, entorno y resultados.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-10-01",
+      "requirement": "Relacionar OP-ID, regla, actividad y criterio funcional con prueba positiva, nula, límite y error.",
+      "source": "D1",
+      "locator": "D1 · texto extraído, línea 175 · por lo menos 2 casos",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Matriz requisito–objeto–prueba y resultados.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-10-02",
+      "requirement": "No entregar PM sin revisar errores/recomendaciones; verificar también tipos, referencias e inputs.",
+      "source": "D1",
+      "locator": "D1 · texto extraído, línea 234 · errores o recomendaciones",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Recibo de validación y hallazgos.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-10-03",
+      "requirement": "Revisar pantallas con contenido realista, alternos y permisos; documentar diferencias respecto a UX.",
+      "source": "R",
+      "locator": "Recomendación de revisión de entrega",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Capturas, casos, resultado y defectos por severidad.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-10-04",
+      "requirement": "Separar generado, validado técnicamente, revisado, candidato, aprobado y autorizado para despliegue.",
+      "source": "R",
+      "locator": "Recomendación de cierre verificable",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Acta de revisión; pendientes; aprobación cuando exista.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-11-01",
+      "requirement": "Mantener inventario UUID–capacidad–responsable–consumidores para cada versión entregada.",
+      "source": "R",
+      "locator": "Atlas previo y análisis de repositorios",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Manifiesto por versión y matriz de impacto.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-11-02",
+      "requirement": "Acordar estructura Git y paquetes Appian sin exigir un repo exclusivo por trámite.",
+      "source": "R",
+      "locator": "Recomendación de organización técnica",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Decisión de organización y contrato de entrega.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-11-03",
+      "requirement": "Registrar precedentes, diferencias por ambiente, inspección de paquete y responsable antes de promover.",
+      "source": "R",
+      "locator": "Recomendación de control de promoción",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Inspección, inventario y aprobación por ambiente.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-11-04",
+      "requirement": "Planificar recuperación ante fallo de objetos, datos e integraciones; no asumir reversión automática.",
+      "source": "R",
+      "locator": "Recomendación de continuidad",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Plan, precondiciones, prueba y responsable.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-12-01",
+      "requirement": "D1 propone eliminación padre/hijo/asíncrono a 3/2/1 días; validar necesidad legal, soporte y recuperación antes de configurar.",
+      "source": "D1",
+      "locator": "D1 · texto extraído, línea 249 · Procesos Padre",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Política aprobada y configuración por tipo.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-12-02",
+      "requirement": "D1 indica 30 días para todos los procesos; verificar alcance, acción al vencer y SLA por tipo.",
+      "source": "D1",
+      "locator": "D1 · texto extraído, línea 258 · Política de Deadlines",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Matriz de plazos y decisión de excepción.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-12-03",
+      "requirement": "D1 cita NCI_OPER_GROUPS_ALERTS_ERROR; acordar receptor y ruteo por aplicación sin reutilizarlo por defecto.",
+      "source": "D1",
+      "locator": "D1 · texto extraído, línea 271 · NCI_OPER_GROUPS_ALERTS_ERROR",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Matriz de alertas y evidencia sin datos sensibles.",
+      "runtime_required": true
+    },
+    {
+      "id": "APP-12-04",
+      "requirement": "Definir runbook, diagnóstico, propietario y atención de incidencias de componentes compartidos.",
+      "source": "R",
+      "locator": "Recomendación de operación modular",
+      "status": "vigencia-por-confirmar",
+      "expected_evidence": "Runbook, contactos por rol y prueba.",
+      "runtime_required": true
+    }
+  ],
+  "roles": [
+    {
+      "id": "coordinador",
+      "criterion_ids": [
+        "APP-01-01",
+        "APP-01-02",
+        "APP-01-03",
+        "APP-01-04",
+        "APP-02-01",
+        "APP-02-02",
+        "APP-02-03",
+        "APP-02-04",
+        "APP-03-01",
+        "APP-03-02",
+        "APP-03-03",
+        "APP-03-04",
+        "APP-03-05",
+        "APP-04-01",
+        "APP-04-02",
+        "APP-04-03",
+        "APP-04-04",
+        "APP-05-01",
+        "APP-05-02",
+        "APP-05-03",
+        "APP-05-04",
+        "APP-05-05",
+        "APP-06-01",
+        "APP-06-02",
+        "APP-06-03",
+        "APP-06-04",
+        "APP-06-05",
+        "APP-06-06",
+        "APP-07-01",
+        "APP-07-02",
+        "APP-07-03",
+        "APP-07-04",
+        "APP-08-01",
+        "APP-08-02",
+        "APP-08-03",
+        "APP-08-04",
+        "APP-09-01",
+        "APP-09-02",
+        "APP-09-03",
+        "APP-09-04",
+        "APP-10-01",
+        "APP-10-02",
+        "APP-10-03",
+        "APP-10-04",
+        "APP-11-01",
+        "APP-11-02",
+        "APP-11-03",
+        "APP-11-04",
+        "APP-12-01",
+        "APP-12-02",
+        "APP-12-03",
+        "APP-12-04"
+      ]
+    },
+    {
+      "id": "arquitectura",
+      "criterion_ids": [
+        "APP-01-01",
+        "APP-01-02",
+        "APP-01-03",
+        "APP-01-04",
+        "APP-02-01",
+        "APP-02-02",
+        "APP-02-03",
+        "APP-02-04",
+        "APP-11-01",
+        "APP-11-02",
+        "APP-11-03",
+        "APP-11-04"
+      ]
+    },
+    {
+      "id": "datos-seguridad",
+      "criterion_ids": [
+        "APP-03-01",
+        "APP-03-02",
+        "APP-03-03",
+        "APP-03-04",
+        "APP-03-05",
+        "APP-08-01",
+        "APP-08-02",
+        "APP-08-03",
+        "APP-08-04"
+      ]
+    },
+    {
+      "id": "reglas-procesos",
+      "criterion_ids": [
+        "APP-04-01",
+        "APP-04-02",
+        "APP-04-03",
+        "APP-04-04",
+        "APP-05-01",
+        "APP-05-02",
+        "APP-05-03",
+        "APP-05-04",
+        "APP-05-05"
+      ]
+    },
+    {
+      "id": "interfaces-ux",
+      "criterion_ids": [
+        "APP-06-01",
+        "APP-06-02",
+        "APP-06-03",
+        "APP-06-04",
+        "APP-06-05",
+        "APP-06-06"
+      ]
+    },
+    {
+      "id": "integracion",
+      "criterion_ids": [
+        "APP-07-01",
+        "APP-07-02",
+        "APP-07-03",
+        "APP-07-04"
+      ]
+    },
+    {
+      "id": "calidad-operacion",
+      "criterion_ids": [
+        "APP-09-01",
+        "APP-09-02",
+        "APP-09-03",
+        "APP-09-04",
+        "APP-10-01",
+        "APP-10-02",
+        "APP-10-03",
+        "APP-10-04",
+        "APP-11-01",
+        "APP-11-02",
+        "APP-11-03",
+        "APP-11-04",
+        "APP-12-01",
+        "APP-12-02",
+        "APP-12-03",
+        "APP-12-04"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,254 @@
+{
+  "technology": "databricks",
+  "version": "1.0.0",
+  "criteria": [
+    {
+      "id": "DBX-01",
+      "requirement": "Oracle identificado como origen/destino; Databricks como motor",
+      "source": "MITAFO-DOCX-20260526-v0.1",
+      "locator": "1.2 y 2.1",
+      "status": "control-derivado-no-aprobacion",
+      "expected_evidence": "Diff, prueba identificada y consulta/run de entorno cuando aplique.",
+      "runtime_required": false
+    },
+    {
+      "id": "DBX-02",
+      "requirement": "Framework CGRLS_0010 identificado por versión/revisión verificadas",
+      "source": "MITAFO-DOCX-20260526-v0.1",
+      "locator": "2.2 y 2.3",
+      "status": "control-derivado-no-aprobacion",
+      "expected_evidence": "Diff, prueba identificada y consulta/run de entorno cuando aplique.",
+      "runtime_required": true
+    },
+    {
+      "id": "DBX-03",
+      "requirement": "Uso comprobado de gestores nativos, sin sustituciones ad hoc",
+      "source": "MITAFO-DOCX-20260526-v0.1",
+      "locator": "2.2 y 2.7",
+      "status": "control-derivado-no-aprobacion",
+      "expected_evidence": "Diff, prueba identificada y consulta/run de entorno cuando aplique.",
+      "runtime_required": true
+    },
+    {
+      "id": "DBX-04",
+      "requirement": "Siete parámetros de servicio conservados y validados",
+      "source": "MITAFO-DOCX-20260526-v0.1",
+      "locator": "3.1",
+      "status": "control-derivado-no-aprobacion",
+      "expected_evidence": "Diff, prueba identificada y consulta/run de entorno cuando aplique.",
+      "runtime_required": false
+    },
+    {
+      "id": "DBX-05",
+      "requirement": "Stage de origen trazado sin inventar cobertura",
+      "source": "MITAFO-DOCX-20260526-v0.1",
+      "locator": "2.7 y 3",
+      "status": "control-derivado-no-aprobacion",
+      "expected_evidence": "Diff, prueba identificada y consulta/run de entorno cuando aplique.",
+      "runtime_required": false
+    },
+    {
+      "id": "DBX-06",
+      "requirement": "Dependencias y condiciones completas, sin referencias inexistentes/ciclos",
+      "source": "MITAFO-DOCX-20260526-v0.1",
+      "locator": "3 y 4.3",
+      "status": "control-derivado-no-aprobacion",
+      "expected_evidence": "Diff, prueba identificada y consulta/run de entorno cuando aplique.",
+      "runtime_required": false
+    },
+    {
+      "id": "DBX-07",
+      "requirement": "SQL OCI/DELTA externo y parámetros tipados mediante framework",
+      "source": "MITAFO-DOCX-20260526-v0.1",
+      "locator": "3.2",
+      "status": "control-derivado-no-aprobacion",
+      "expected_evidence": "Diff, prueba identificada y consulta/run de entorno cuando aplique.",
+      "runtime_required": false
+    },
+    {
+      "id": "DBX-08",
+      "requirement": "Nombres de workflow, task, notebook, SQL y Delta trazables",
+      "source": "MITAFO-DOCX-20260526-v0.1",
+      "locator": "3.6",
+      "status": "control-derivado-no-aprobacion",
+      "expected_evidence": "Diff, prueba identificada y consulta/run de entorno cuando aplique.",
+      "runtime_required": false
+    },
+    {
+      "id": "DBX-09",
+      "requirement": "Aislamiento por folio y retención explícita de cada Delta",
+      "source": "MITAFO-DOCX-20260526-v0.1",
+      "locator": "2.1 y 3.6.6",
+      "status": "control-derivado-no-aprobacion",
+      "expected_evidence": "Diff, prueba identificada y consulta/run de entorno cuando aplique.",
+      "runtime_required": false
+    },
+    {
+      "id": "DBX-10",
+      "requirement": "Limpieza por notebook/folio con excepción de movimientos revisada",
+      "source": "MITAFO-DOCX-20260526-v0.1",
+      "locator": "2.1 y 4.2",
+      "status": "control-derivado-no-aprobacion",
+      "expected_evidence": "Diff, prueba identificada y consulta/run de entorno cuando aplique.",
+      "runtime_required": true
+    },
+    {
+      "id": "DBX-11",
+      "requirement": "Callback completo, incluyendo parámetros nulos",
+      "source": "MITAFO-DOCX-20260526-v0.1",
+      "locator": "3.3 y 3.4",
+      "status": "control-derivado-no-aprobacion",
+      "expected_evidence": "Diff, prueba identificada y consulta/run de entorno cuando aplique.",
+      "runtime_required": true
+    },
+    {
+      "id": "DBX-12",
+      "requirement": "Errores, logging y recuperación usando componentes del framework",
+      "source": "MITAFO-DOCX-20260526-v0.1",
+      "locator": "2.1 y 2.2",
+      "status": "control-derivado-no-aprobacion",
+      "expected_evidence": "Diff, prueba identificada y consulta/run de entorno cuando aplique.",
+      "runtime_required": true
+    },
+    {
+      "id": "DBX-13",
+      "requirement": "Entorno parametrizado y credenciales fuera del contrato/código",
+      "source": "MITAFO-DOCX-20260526-v0.1",
+      "locator": "2.1 y 2.6",
+      "status": "control-derivado-no-aprobacion",
+      "expected_evidence": "Diff, prueba identificada y consulta/run de entorno cuando aplique.",
+      "runtime_required": false
+    },
+    {
+      "id": "DBX-14",
+      "requirement": "Prueba unitaria de cada notebook con resultado esperado",
+      "source": "MITAFO-DOCX-20260526-v0.1",
+      "locator": "4.1",
+      "status": "control-derivado-no-aprobacion",
+      "expected_evidence": "Diff, prueba identificada y consulta/run de entorno cuando aplique.",
+      "runtime_required": true
+    },
+    {
+      "id": "DBX-15",
+      "requirement": "Prueba funcional y comparación exacta de registros/valores en migraciones",
+      "source": "MITAFO-DOCX-20260526-v0.1",
+      "locator": "4.1 y 4.2",
+      "status": "control-derivado-no-aprobacion",
+      "expected_evidence": "Diff, prueba identificada y consulta/run de entorno cuando aplique.",
+      "runtime_required": true
+    },
+    {
+      "id": "DBX-16",
+      "requirement": "Invocación y callback verificados con servicios reales",
+      "source": "MITAFO-DOCX-20260526-v0.1",
+      "locator": "4.1 y 4.2",
+      "status": "control-derivado-no-aprobacion",
+      "expected_evidence": "Diff, prueba identificada y consulta/run de entorno cuando aplique.",
+      "runtime_required": true
+    },
+    {
+      "id": "DBX-17",
+      "requirement": "Limpieza y concurrencia verificadas respetando retención/folios",
+      "source": "MITAFO-DOCX-20260526-v0.1",
+      "locator": "4.1",
+      "status": "control-derivado-no-aprobacion",
+      "expected_evidence": "Diff, prueba identificada y consulta/run de entorno cuando aplique.",
+      "runtime_required": true
+    },
+    {
+      "id": "DBX-18",
+      "requirement": "Rendimiento comparado, revisión y pendientes visibles antes de aceptar",
+      "source": "MITAFO-DOCX-20260526-v0.1",
+      "locator": "4.2 y 4.3",
+      "status": "control-derivado-no-aprobacion",
+      "expected_evidence": "Diff, prueba identificada y consulta/run de entorno cuando aplique.",
+      "runtime_required": true
+    }
+  ],
+  "roles": [
+    {
+      "id": "coordinador",
+      "criterion_ids": [
+        "DBX-01",
+        "DBX-02",
+        "DBX-03",
+        "DBX-04",
+        "DBX-05",
+        "DBX-06",
+        "DBX-07",
+        "DBX-08",
+        "DBX-09",
+        "DBX-10",
+        "DBX-11",
+        "DBX-12",
+        "DBX-13",
+        "DBX-14",
+        "DBX-15",
+        "DBX-16",
+        "DBX-17",
+        "DBX-18"
+      ]
+    },
+    {
+      "id": "framework",
+      "criterion_ids": [
+        "DBX-02",
+        "DBX-03",
+        "DBX-04",
+        "DBX-11",
+        "DBX-12",
+        "DBX-13"
+      ]
+    },
+    {
+      "id": "datos-sql",
+      "criterion_ids": [
+        "DBX-01",
+        "DBX-05",
+        "DBX-07",
+        "DBX-08",
+        "DBX-09",
+        "DBX-10",
+        "DBX-15"
+      ]
+    },
+    {
+      "id": "jobs-recuperacion",
+      "criterion_ids": [
+        "DBX-05",
+        "DBX-06",
+        "DBX-08",
+        "DBX-09",
+        "DBX-10",
+        "DBX-11",
+        "DBX-12",
+        "DBX-13",
+        "DBX-16",
+        "DBX-17"
+      ]
+    },
+    {
+      "id": "calidad-operacion",
+      "criterion_ids": [
+        "DBX-01",
+        "DBX-02",
+        "DBX-03",
+        "DBX-04",
+        "DBX-05",
+        "DBX-06",
+        "DBX-07",
+        "DBX-08",
+        "DBX-09",
+        "DBX-10",
+        "DBX-11",
+        "DBX-12",
+        "DBX-13",
+        "DBX-14",
+        "DBX-15",
+        "DBX-16",
+        "DBX-17",
+        "DBX-18"
+      ]
+    }
+  ]
+}
