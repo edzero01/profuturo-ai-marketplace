@@ -1,0 +1,8 @@
+{
+  "name": "profuturo-databricks",
+  "version": "1.0.0",
+  "description": "Construcción y revisión databricks desde P4 con lineamientos trazables.",
+  "author": {
+    "name": "Plataforma Profuturo"
+  }
+}

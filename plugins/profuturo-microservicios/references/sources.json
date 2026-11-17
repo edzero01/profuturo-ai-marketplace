@@ -1,0 +1,19 @@
+{
+  "technology": "microservicios",
+  "precedence": "P4 define decisiones del proyecto; fuentes recibidas y recomendaciones conservan sus estados. Contradicciones requieren decisión visible.",
+  "version": "1.0.0",
+  "sources": [
+    {
+      "id": "JAVA-PUBLISHED",
+      "title": "Reglas publicadas de profuturo-java",
+      "version": "1.0.0",
+      "revision": "0e3d1f391d76f6a9979195379eb00df7c6dd232e",
+      "status": "reglas-publicadas; documento-corporativo-original-no-identificado"
+    },
+    {
+      "id": "SpecForge-P4-microservices",
+      "title": "Contrato de contenido P4 microservicios",
+      "status": "requisitos-de-diseño; no-aprobación-corporativa-adicional"
+    }
+  ]
+}

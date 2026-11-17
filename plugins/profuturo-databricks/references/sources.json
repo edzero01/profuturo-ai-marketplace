@@ -1,0 +1,67 @@
+{
+  "technology": "databricks",
+  "precedence": "P4 define decisiones del proyecto; fuentes recibidas y recomendaciones conservan sus estados. Contradicciones requieren decisión visible.",
+  "version": "1.0.0",
+  "sources": [
+    {
+      "id": "MITAFO-DOCX-20260526-v0.1",
+      "file_name": "01. PROFUTURO_Diseño_de_Solución_ETL_MITAFO (2).docx",
+      "title": "Proyecto Actualización Tecnológica Core — Diseño de Solución Databricks",
+      "document_version": "0.1",
+      "document_date": "2026-05-26",
+      "sha256": "7e8c1610993229749f601a059abd493dda9392d8ef4428820c8ee70a99f81301",
+      "approval": "NOT_ESTABLISHED_BY_THIS_SCAFFOLD",
+      "sections": [
+        "1.2 Alcance",
+        "2.1 Arquitectura Aplicativa",
+        "2.2 Componentes del Framework",
+        "2.3 Flujo de inicialización",
+        "2.6 Configuraciones globales",
+        "2.7 Principios de diseño de la migración",
+        "3 Mapeo DataStage a Databricks",
+        "3.1 Mapeo de parámetros",
+        "3.2 Conversión de SQL",
+        "3.3 Notificación",
+        "3.4 Manejador de Errores",
+        "3.5 Estructura del Repositorio",
+        "3.6 Nomenclatura",
+        "4 Estrategia de Pruebas"
+      ],
+      "open_interpretations": [
+        {
+          "id": "GUIDE-RETENTION",
+          "question": "Precisar la excepción de tablas de movimientos y las tablas compartidas al validar cero residuos.",
+          "sections": [
+            "2.1",
+            "4.2"
+          ]
+        },
+        {
+          "id": "GUIDE-ROOT",
+          "question": "Confirmar la raíz vigente entre Workspace/Shared/MITAFO y Workspace/Repos/APPS/SRC/source/dbx-mitdataprocesses/MITAFO.",
+          "sections": [
+            "2.1",
+            "3.5"
+          ]
+        },
+        {
+          "id": "GUIDE-NAMING",
+          "question": "Confirmar código de proyecto y formatos ante los ejemplos ARECA_0090 y ANCIO_0090.",
+          "sections": [
+            "3.5",
+            "3.6"
+          ]
+        },
+        {
+          "id": "GUIDE-CAPACITY",
+          "question": "Verificar alcance de Singleton y capacidad real de concurrencia con versión/runtime/recursos de destino.",
+          "sections": [
+            "2.4",
+            "2.5"
+          ]
+        }
+      ],
+      "validation_note": "Se revisaron texto, tablas, comentarios y tres diagramas; no se auditó el layout completo ni se ejecutaron las APIs descritas."
+    }
+  ]
+}

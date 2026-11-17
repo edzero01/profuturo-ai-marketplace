@@ -9,6 +9,21 @@
       "name": "profuturo-java",
       "source": "./plugins/profuturo-java",
       "description": "Reglas y procedimientos para microservicios Spring Boot de Profuturo (capa Experience)"
+    },
+    {
+      "name": "profuturo-appian",
+      "source": "./plugins/profuturo-appian",
+      "description": "Agentes, skills y lineamientos de construcción appian desde P4."
+    },
+    {
+      "name": "profuturo-databricks",
+      "source": "./plugins/profuturo-databricks",
+      "description": "Agentes, skills y lineamientos de construcción databricks desde P4."
+    },
+    {
+      "name": "profuturo-microservicios",
+      "source": "./plugins/profuturo-microservicios",
+      "description": "Agentes, skills y lineamientos de construcción microservicios desde P4."
     }
   ]
 }

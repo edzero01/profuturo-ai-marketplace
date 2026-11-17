@@ -1,0 +1,8 @@
+{
+  "name": "profuturo-appian",
+  "version": "1.0.0",
+  "description": "Construcción y revisión appian desde P4 con lineamientos trazables.",
+  "author": {
+    "name": "Plataforma Profuturo"
+  }
+}

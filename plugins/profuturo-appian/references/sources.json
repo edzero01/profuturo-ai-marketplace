@@ -1,0 +1,26 @@
+{
+  "technology": "appian",
+  "precedence": "P4 define decisiones del proyecto; fuentes recibidas y recomendaciones conservan sus estados. Contradicciones requieren decisión visible.",
+  "version": "1.0.0",
+  "sources": [
+    {
+      "id": "D1",
+      "title": "Lineamientos Appian NTTDATA",
+      "version": "1.0",
+      "status": "vigencia-y-precedencia-por-confirmar",
+      "sha256": "ff677e50704b6301b742123f267fc6441629cac1cb5cf9c2ab15e36949db1c6d"
+    },
+    {
+      "id": "D2",
+      "title": "Lineamientos y FrontEnd Appian Profuturo",
+      "version": "v02 5 1 en nombre recibido",
+      "status": "vigencia-y-precedencia-por-confirmar",
+      "sha256": "0cae14f62596c413f320f455e7f23db8ce9d7477315ac44ffb42321bb69f9551"
+    },
+    {
+      "id": "R",
+      "title": "Recomendaciones derivadas del handoff",
+      "status": "propuestas-no-aprobadas"
+    }
+  ]
+}

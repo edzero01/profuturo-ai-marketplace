@@ -52,3 +52,7 @@ claude plugin install profuturo-java@profuturo --scope project
 ## Gobierno en Backstage
 
 Las entidades de `catalog/` modelan `marketplace → plugin → skills` (relación `hasPart`) y `skill → reglas` (`dependsOn`). Cada microservicio declara `dependsOn: airesource:default/profuturo-java` en su `catalog-info.yaml`, así el catálogo responde qué servicios usan cada plugin y a quién afecta un cambio de regla.
+
+## Construcción por tecnología
+
+Consulta [los tres plugins y su migración](docs/tecnologias.md). El plugin Java existente se mantiene para compatibilidad; proyectos nuevos pueden seleccionar el paquete Microservicios.

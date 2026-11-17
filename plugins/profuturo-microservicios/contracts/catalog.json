@@ -1,0 +1,273 @@
+{
+  "technology": "microservicios",
+  "version": "1.0.0",
+  "criteria": [
+    {
+      "id": "MS-01",
+      "requirement": "Fronteras de servicio",
+      "source": "SpecForge-P4-microservices",
+      "locator": "MS-01",
+      "status": "requisito-diseno-no-lineamiento-corporativo-nuevo",
+      "expected_evidence": "Contrato, diff y prueba positiva/negativa por operación.",
+      "runtime_required": false
+    },
+    {
+      "id": "MS-02",
+      "requirement": "Operaciones",
+      "source": "SpecForge-P4-microservices",
+      "locator": "MS-02",
+      "status": "requisito-diseno-no-lineamiento-corporativo-nuevo",
+      "expected_evidence": "Contrato, diff y prueba positiva/negativa por operación.",
+      "runtime_required": false
+    },
+    {
+      "id": "MS-03",
+      "requirement": "Dependencias síncronas",
+      "source": "SpecForge-P4-microservices",
+      "locator": "MS-03",
+      "status": "requisito-diseno-no-lineamiento-corporativo-nuevo",
+      "expected_evidence": "Contrato, diff y prueba positiva/negativa por operación.",
+      "runtime_required": false
+    },
+    {
+      "id": "MS-04",
+      "requirement": "Participación en eventos",
+      "source": "SpecForge-P4-microservices",
+      "locator": "MS-04",
+      "status": "requisito-diseno-no-lineamiento-corporativo-nuevo",
+      "expected_evidence": "Contrato, diff y prueba positiva/negativa por operación.",
+      "runtime_required": true
+    },
+    {
+      "id": "MS-05",
+      "requirement": "Solicitudes y respuestas",
+      "source": "SpecForge-P4-microservices",
+      "locator": "MS-05",
+      "status": "requisito-diseno-no-lineamiento-corporativo-nuevo",
+      "expected_evidence": "Contrato, diff y prueba positiva/negativa por operación.",
+      "runtime_required": false
+    },
+    {
+      "id": "MS-06",
+      "requirement": "Validaciones y errores",
+      "source": "SpecForge-P4-microservices",
+      "locator": "MS-06",
+      "status": "requisito-diseno-no-lineamiento-corporativo-nuevo",
+      "expected_evidence": "Contrato, diff y prueba positiva/negativa por operación.",
+      "runtime_required": false
+    },
+    {
+      "id": "MS-07",
+      "requirement": "Compatibilidad de versiones",
+      "source": "SpecForge-P4-microservices",
+      "locator": "MS-07",
+      "status": "requisito-diseno-no-lineamiento-corporativo-nuevo",
+      "expected_evidence": "Contrato, diff y prueba positiva/negativa por operación.",
+      "runtime_required": false
+    },
+    {
+      "id": "MS-08",
+      "requirement": "Identificación y correlación",
+      "source": "SpecForge-P4-microservices",
+      "locator": "MS-08",
+      "status": "requisito-diseno-no-lineamiento-corporativo-nuevo",
+      "expected_evidence": "Contrato, diff y prueba positiva/negativa por operación.",
+      "runtime_required": true
+    },
+    {
+      "id": "MS-09",
+      "requirement": "Secuencias y lógica",
+      "source": "SpecForge-P4-microservices",
+      "locator": "MS-09",
+      "status": "requisito-diseno-no-lineamiento-corporativo-nuevo",
+      "expected_evidence": "Contrato, diff y prueba positiva/negativa por operación.",
+      "runtime_required": false
+    },
+    {
+      "id": "MS-10",
+      "requirement": "Transacciones y concurrencia",
+      "source": "SpecForge-P4-microservices",
+      "locator": "MS-10",
+      "status": "requisito-diseno-no-lineamiento-corporativo-nuevo",
+      "expected_evidence": "Contrato, diff y prueba positiva/negativa por operación.",
+      "runtime_required": true
+    },
+    {
+      "id": "MS-11",
+      "requirement": "Idempotencia",
+      "source": "SpecForge-P4-microservices",
+      "locator": "MS-11",
+      "status": "requisito-diseno-no-lineamiento-corporativo-nuevo",
+      "expected_evidence": "Contrato, diff y prueba positiva/negativa por operación.",
+      "runtime_required": true
+    },
+    {
+      "id": "MS-12",
+      "requirement": "Reintentos y recuperación",
+      "source": "SpecForge-P4-microservices",
+      "locator": "MS-12",
+      "status": "requisito-diseno-no-lineamiento-corporativo-nuevo",
+      "expected_evidence": "Contrato, diff y prueba positiva/negativa por operación.",
+      "runtime_required": true
+    },
+    {
+      "id": "MS-13",
+      "requirement": "Entidades y campos",
+      "source": "SpecForge-P4-microservices",
+      "locator": "MS-13",
+      "status": "requisito-diseno-no-lineamiento-corporativo-nuevo",
+      "expected_evidence": "Contrato, diff y prueba positiva/negativa por operación.",
+      "runtime_required": false
+    },
+    {
+      "id": "MS-14",
+      "requirement": "Claves y restricciones",
+      "source": "SpecForge-P4-microservices",
+      "locator": "MS-14",
+      "status": "requisito-diseno-no-lineamiento-corporativo-nuevo",
+      "expected_evidence": "Contrato, diff y prueba positiva/negativa por operación.",
+      "runtime_required": false
+    },
+    {
+      "id": "MS-15",
+      "requirement": "Propiedad e historial de datos",
+      "source": "SpecForge-P4-microservices",
+      "locator": "MS-15",
+      "status": "requisito-diseno-no-lineamiento-corporativo-nuevo",
+      "expected_evidence": "Contrato, diff y prueba positiva/negativa por operación.",
+      "runtime_required": false
+    },
+    {
+      "id": "MS-16",
+      "requirement": "Migraciones",
+      "source": "SpecForge-P4-microservices",
+      "locator": "MS-16",
+      "status": "requisito-diseno-no-lineamiento-corporativo-nuevo",
+      "expected_evidence": "Contrato, diff y prueba positiva/negativa por operación.",
+      "runtime_required": true
+    },
+    {
+      "id": "MS-17",
+      "requirement": "Arquetipos y configuración",
+      "source": "SpecForge-P4-microservices",
+      "locator": "MS-17",
+      "status": "requisito-diseno-no-lineamiento-corporativo-nuevo",
+      "expected_evidence": "Contrato, diff y prueba positiva/negativa por operación.",
+      "runtime_required": false
+    },
+    {
+      "id": "MS-18",
+      "requirement": "Controles de acceso",
+      "source": "SpecForge-P4-microservices",
+      "locator": "MS-18",
+      "status": "requisito-diseno-no-lineamiento-corporativo-nuevo",
+      "expected_evidence": "Contrato, diff y prueba positiva/negativa por operación.",
+      "runtime_required": true
+    },
+    {
+      "id": "MS-19",
+      "requirement": "Observabilidad",
+      "source": "SpecForge-P4-microservices",
+      "locator": "MS-19",
+      "status": "requisito-diseno-no-lineamiento-corporativo-nuevo",
+      "expected_evidence": "Contrato, diff y prueba positiva/negativa por operación.",
+      "runtime_required": true
+    },
+    {
+      "id": "MS-20",
+      "requirement": "Pruebas y condiciones de despliegue",
+      "source": "SpecForge-P4-microservices",
+      "locator": "MS-20",
+      "status": "requisito-diseno-no-lineamiento-corporativo-nuevo",
+      "expected_evidence": "Contrato, diff y prueba positiva/negativa por operación.",
+      "runtime_required": true
+    }
+  ],
+  "roles": [
+    {
+      "id": "coordinador",
+      "criterion_ids": [
+        "MS-01",
+        "MS-02",
+        "MS-03",
+        "MS-04",
+        "MS-05",
+        "MS-06",
+        "MS-07",
+        "MS-08",
+        "MS-09",
+        "MS-10",
+        "MS-11",
+        "MS-12",
+        "MS-13",
+        "MS-14",
+        "MS-15",
+        "MS-16",
+        "MS-17",
+        "MS-18",
+        "MS-19",
+        "MS-20"
+      ]
+    },
+    {
+      "id": "contratos-eventos",
+      "criterion_ids": [
+        "MS-01",
+        "MS-02",
+        "MS-03",
+        "MS-04",
+        "MS-05",
+        "MS-06",
+        "MS-07",
+        "MS-08"
+      ]
+    },
+    {
+      "id": "logica-datos",
+      "criterion_ids": [
+        "MS-09",
+        "MS-10",
+        "MS-11",
+        "MS-13",
+        "MS-14",
+        "MS-15",
+        "MS-16"
+      ]
+    },
+    {
+      "id": "seguridad-resiliencia",
+      "criterion_ids": [
+        "MS-08",
+        "MS-12",
+        "MS-17",
+        "MS-18",
+        "MS-19"
+      ]
+    },
+    {
+      "id": "calidad-operacion",
+      "criterion_ids": [
+        "MS-01",
+        "MS-02",
+        "MS-03",
+        "MS-04",
+        "MS-05",
+        "MS-06",
+        "MS-07",
+        "MS-08",
+        "MS-09",
+        "MS-10",
+        "MS-11",
+        "MS-12",
+        "MS-13",
+        "MS-14",
+        "MS-15",
+        "MS-16",
+        "MS-17",
+        "MS-18",
+        "MS-19",
+        "MS-20"
+      ]
+    }
+  ]
+}
